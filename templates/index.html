@@ -3,5 +3,10 @@
 <!-- extends part makes the code reusable -->
 
 {% block main %}
-<h2> stuff on index page </h2>
+<h2>ADDED TASKS </h2>
+<ul>
+	{% for task in tasks%}
+	<li> {{ task }}</li>
+	{% endfor %}
+</ul>
 {% endblock %}

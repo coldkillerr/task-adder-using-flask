@@ -2,8 +2,9 @@
 {% extends "base.html" %}
 
 {% block main %}
-        <h2>Some stuff on about page</h2>
-        <form action="/add" method="POST">
+        <h2>ADD YOUR TASK HERE : </h2>
+        <br>
+        <form action="{{ url_for('add') }}" method="POST">
                 {{ form.csrf_token}} <!--this protects the forms against malicious activities and we need to pass a secret key in app.py for this to work-->
                 {{ form.title}}
                 {{ form.submit }}
