@@ -1,8 +1,8 @@
 # pip install flask
 # Flask is a class in module flask
 # render_template is used to get render html pages
-from flask import Flask , render_template
-from flask_sqlalchemy import SQLAlchemy
+from flask import Flask , render_template 
+from flask_sqlalchemy import SQLAlchemy 
 from datetime import datetime
 
 

@@ -1,12 +1,15 @@
 {% extends "base.html" %}
 
-<!-- extends part makes the code reusable -->
-
 {% block main %}
-<h2>ADDED TASKS </h2>
-<ul>
-	{% for task in tasks%}
-	<li> {{ task }}</li>
-	{% endfor %}
-</ul>
+  {% for task in tasks %}
+    <div class="card">
+      <div class="card-body">
+        <h3>{{ task.title }}</h3>
+        <p>Added on {{ task.date }}</p>
+
+        
+
+      </div>
+    </div>
+  {% endfor %}
 {% endblock %}

@@ -1,7 +1,7 @@
 #this module contains all the routes for the app
 
 from app import app , db
-from flask import render_template, redirect , url_for # render_template is used to get render html pages
+from flask import render_template, redirect , url_for , flash , get_flashed_messages # render_template is used to get render html pages
 import forms # this imports the forms.py code here
 # this tells the app that at '/' we need to run index()
 from models import Task
@@ -26,6 +26,7 @@ def add():
 		t=Task(title=form.title.data,date=datetime.utcnow())
 		db.session.add(t)
 		db.session.commit()
+		flash('Task added successfully')
 		return redirect(url_for('index'))
 
 	return render_template('add.html',form=form,title='ABOUT') # the from is passed to the page using form variable
