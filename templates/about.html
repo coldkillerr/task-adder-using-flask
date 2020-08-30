@@ -1,8 +1,16 @@
+
 {% extends "base.html" %}
 
-<!-- extends part makes the code in "base.html" reusable -->
-
-
 {% block main %}
-<h2> stuff on about page </h2>
+        <h2>Some stuff on about page</h2>
+        <form action="/about" method="POST">
+                {{ form.csrf_token}} <!--this protects the forms against malicious activities and we need to pass a secret key in app.py for this to work-->
+                {{ form.title}}
+                {{ form.submit }}
+        </form>
+
+        {% if title%}
+                <h1>{{ title }}</h1>
+        {% endif %}
 {% endblock %}
+    
