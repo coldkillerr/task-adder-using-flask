@@ -18,4 +18,9 @@ class AddTaskForm(FlaskForm):
     
     submit=SubmitField('Submit')
     # the SubmitField adds a submit button
+
+class DeleteTaskForm(FlaskForm):
+
+    delete=SubmitField('Delete')
+    
     
